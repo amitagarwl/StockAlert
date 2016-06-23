@@ -1,0 +1,4 @@
+redisEndPoint: localhost
+googleEndPoint: http://www.google.com/finance/info?q=NSE
+bucketName: alertData
+

@@ -1,0 +1,10 @@
+hset alertData PATINTLOG '{"name":"PATINTLOG","lowerLimit":"105","upperLimit":"110"}'
+hset alertData GATI '{"name":"GATI","lowerLimit":"160","upperLimit":"170"}'
+hset alertData SONATSOFTW '{"name":"SONATSOFTW","lowerLimit":"145","upperLimit":"160"}'
+ hset alertData INDIGO '{"name":"INDIGO","lowerLimit":"950","upperLimit":"1050"}'
+ hset alertData RAJESHEXPO '{"name":"RAJESHEXPO","lowerLimit":"475","upperLimit":"500"}'
+ hset alertData WOCKPHARMA '{"name":"WOCKPHARMA","lowerLimit":"905","upperLimit":"963"}'
+
+mvn clean compile assembly:single
+
+watch -d=cumulative -n 20 java -jar target/stock-alert-1.0-jar-with-dependencies.jar src/main/resources/config.yml
